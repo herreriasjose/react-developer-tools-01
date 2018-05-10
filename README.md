@@ -66,7 +66,7 @@ That's a good start. But to see how it works more deeply, let's create a couple 
 
 First a simple component that receives the value of a number, stores it in its state and displays it on the screen:
 
-```
+```javascript
 // debuggin-react/src/SimpleNumber.js
 
 import React, { Component } from 'react';
