@@ -61,6 +61,7 @@ It will take a moment to load the content of the page and then you will see the 
 </p>
 
 
+
 That's a good start. But to see how it works more deeply, let's create a couple of elements.
 
 First a simple component that receives the value of a number, stores it in its state and displays it on the screen:
@@ -89,82 +90,77 @@ export default SimpleNumber;
 
 And a container that creates 5 of those simple numbers and gives them a random value:
 
-
-
+```
 // debuggin-react/src/SimpleContainer.js
+
 import React, { Component } from 'react';
 import SimpleNumber from './SimpleNumber';
-class SimpleContainer extends Component {
-constructor(props){
-super(props);
-this.state = { amount: 0, arraySimpleNumbers: []};
-this.timer = setInterval(this.addNumber.bind(this),2000);
-}
 
-addNumber(){
-let amount = this.state.amount + 1; 
-let arraySimpleNumbers = this.state.arraySimpleNumbers;
-let value = Math.floor(Math.random()* 5 + 1);
-arraySimpleNumbers.push(<SimpleNumber key={this.state.amount} value={value}/>);
-if (amount === 5){
-clearInterval(this.timer);
-}
-this.setState({amount: amount, arraySimpleNumbers: arraySimpleNumbers});
-}
-render(){
-return (<div className="SimpleContainer">
-<h3>Simple Container</h3>
-<div>
-{this.state.arraySimpleNumbers}
-</div>
-</div>);
-}
+class SimpleContainer extends Component {
+            constructor(props){
+                        super(props);
+                        this.state = { amount: 0, arraySimpleNumbers: []};
+                        this.timer = setInterval(this.addNumber.bind(this),2000);
+            }
+
+            addNumber(){
+                        let amount = this.state.amount + 1; 
+                        let arraySimpleNumbers = this.state.arraySimpleNumbers;
+                        let value = Math.floor(Math.random()* 5 + 1);
+                        arraySimpleNumbers.push(<SimpleNumber key={this.state.amount} value={value}/>);
+                        if (amount === 5){
+                                    clearInterval(this.timer);
+                        }
+                        this.setState({amount: amount, arraySimpleNumbers: arraySimpleNumbers});
+            }
+            
+            render(){
+                        return (<div className="SimpleContainer">
+                                    <h3>Simple Container</h3>
+                                    <div>
+                                    {this.state.arraySimpleNumbers}
+                                    </div>
+                                    </div>);
+            }
 }
 export default SimpleContainer;
-
-
-
-
-
-
+```
 
 Finally, let's remove all the superfluous from the entry point of our React application:
 
+```
 // debuggin-react/src/App.js
+
 import React, { Component } from 'react';
 import './App.css';
 import SimpleContainer from './SimpleContainer'
+
 class App extends Component {
-render() {
-return (
-<div className="App">
-<SimpleContainer>
-</SimpleContainer>
-</div>
-);
+            render() {
+                        return (
+                        <div className="App">
+                        <SimpleContainer>
+                        </SimpleContainer>
+                        </div>
+                        );
+            }
 }
-}
+
 export default App;
-
-
-
-
+```
 
 We should have something like this right now:
 
-
-
-
-
-
-
-
-
+<p align="center">
+            <img src="img/react-developer-tools-07.png">
+</p>
 
 
 And if we reload the page and display <App> in the React Developer Tools tab, and then display <SimpleContainer> we will see how it is slowly populated with a total of five <SimpleNumber>.
 
-
+<p align="center">
+            <img src="img/react-developer-tools-08.png">
+</p>
 
 
 
