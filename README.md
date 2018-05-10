@@ -1,5 +1,5 @@
 
-Debuggin React components in the browser
+Debuggin React Components in the Browser
 ========================================
 
 
