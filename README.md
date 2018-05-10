@@ -19,6 +19,7 @@ The first step is to install the plugin in your browser. I will use Firefox but 
 
 So we'll see how this new icon appears in our plugin bar.
 
+
 <p align="center">
             <img src="img/react-developer-tools-02.png">
 </p>
@@ -35,12 +36,14 @@ debugging-react$ npm start
 
 At this point we should see that the icon has awakened.
 
+
 <p align="center">
             <img src="img/react-developer-tools-03.png">
 </p>
 
 
 Let's press it and see what it says.
+
 
 <p align="center">
             <img src="img/react-developer-tools-04.png">
@@ -55,6 +58,7 @@ It detected that we are working with a development version. Let's open developer
 </p>
 
 It will take a moment to load the content of the page and then you will see the root React Component, which should be very similar to the JSX code that'create-react-app' has used to create it:
+
 
 <p align="center">
             <img src="img/react-developer-tools-06.png">
@@ -151,6 +155,7 @@ export default App;
 
 We should have something like this right now:
 
+
 <p align="center">
             <img src="img/react-developer-tools-07.png">
 </p>
@@ -158,9 +163,11 @@ We should have something like this right now:
 
 And if we reload the page and display &lt;App&gt; in the React Developer Tools tab, and then display &lt;SimpleContainer&gt; we will see how it is slowly populated with a total of five &lt;SimpleNumber&gt;.
 
+
 <p align="center">
             <img src="img/react-developer-tools-08.png">
 </p>
+
 
 
 
@@ -168,6 +175,7 @@ We see that all the React elements are highlighted and the rest of the DOM eleme
 
 
 Let's select one of the elements &lt;SimpleNumber&gt; and see what it contains:
+
 
 <p align="center">
             <img src="img/react-developer-tools-09.png">
@@ -179,9 +187,11 @@ We can see that the &lt;SimpleNumber&gt; element has a Key property that we have
 
 It is interesting to note that these Props and State values can be modified directly from the React Developer Tools. Let's do it:
 
+
 <p align="center">
             <img src="img/react-developer-tools-10.png">
 </p>
+
 
 
 
@@ -191,11 +201,13 @@ The modified values are automatically rendered on the page.
 HighLight Updates
 -----------------
 
-React Developer Tools also allow us to monitor when one of the React elements is updated. To do this we will reload the page and select "Highlight Updates". 
+React Developer Tools also allow us to monitor when one of the React elements is updated. To do this we will reload the page and select "Highlight Updates".
+
 
 <p align="center">
             <img src="img/react-developer-tools-11.png">
 </p>
+
 
 
 With this option enabled every time an item is rendered again it will be highlighted for a moment. Very useful, for example, to check if items that should not be updated are doing so.
