@@ -3,7 +3,7 @@ Debuggin React components in the browser
 ========================================
 
 
-Today's web browsers have incredible development tools installed by default. Examples are Chrome DevTools and Firefox Developer Tools. These are essential if you are doing any type of web development because they expose what's really going on in terms of DOM, styles, performance, network requests, whatever. 
+Today's web browsers have incredible development tools installed by default. Examples are Chrome DevTools and Firefox Developer Tools. These are essential if you are doing any type of web development because they expose what's really going on in terms of DOM, styles, performance, whatever. 
 
 With React, you still need all these tools, but you need more than that. The basic principle of React is declarative markup within JavaScript components. If this abstraction is not present in your tools you are making things more complicated than they should be.
 
@@ -13,24 +13,20 @@ React Developer Tools
 
 The first step is to install the plugin in your browser. I will use Firefox but there is also a version for Chrome. 
 
-
+<p align="center">
+            <img src="img/react-developer-tools-01.png">
+</p>
 
 So we'll see how this new icon appears in our plugin bar.
 
-
-
-
-
-
-
-
-
-
+<p align="center">
+            <img src="img/react-developer-tools-02.png">
+</p>
 
 Then, using create-react-app let's prepare a small application to test our new tool:
-
+```
 $ create-react-app debugging-react
-
+```
 And we'll run the development server:
 
 $ cd debugging-react
