@@ -156,7 +156,7 @@ We should have something like this right now:
 </p>
 
 
-And if we reload the page and display <App> in the React Developer Tools tab, and then display <SimpleContainer> we will see how it is slowly populated with a total of five <SimpleNumber>.
+And if we reload the page and display &lt;App&gt; in the React Developer Tools tab, and then display &lt;SimpleContainer&gt; we will see how it is slowly populated with a total of five &lt;SimpleNumber&gt;.
 
 <p align="center">
             <img src="img/react-developer-tools-08.png">
@@ -167,7 +167,7 @@ And if we reload the page and display <App> in the React Developer Tools tab, an
 We see that all the React elements are highlighted and the rest of the DOM elements are not. Very useful. Also in the right window we can see the Props and State values of the element.
 
 
-Let's select one of the elements <SimpleNumber> and see what it contains:
+Let's select one of the elements &lt;SimpleNumber&gt; and see what it contains:
 
 <p align="center">
             <img src="img/react-developer-tools-09.png">
@@ -175,7 +175,7 @@ Let's select one of the elements <SimpleNumber> and see what it contains:
 
 
 
-We can see that the <SimpleNumber> element has a Key property that we have passed from the next higher element, as well as Props and State. 
+We can see that the &lt;SimpleNumber&gt; element has a Key property that we have passed from the next higher element, as well as Props and State. 
 
 It is interesting to note that these Props and State values can be modified directly from the React Developer Tools. Let's do it:
 
