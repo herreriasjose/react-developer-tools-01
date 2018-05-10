@@ -169,13 +169,9 @@ We see that all the React elements are highlighted and the rest of the DOM eleme
 
 Let's select one of the elements <SimpleNumber> and see what it contains:
 
-
-
-
-
-
-
-
+<p align="center">
+            <img src="img/react-developer-tools-09.png">
+</p>
 
 
 
@@ -183,7 +179,9 @@ We can see that the <SimpleNumber> element has a Key property that we have passe
 
 It is interesting to note that these Props and State values can be modified directly from the React Developer Tools. Let's do it:
 
-
+<p align="center">
+            <img src="img/react-developer-tools-10.png">
+</p>
 
 
 
@@ -195,7 +193,9 @@ HighLight Updates
 
 React Developer Tools also allow us to monitor when one of the React elements is updated. To do this we will reload the page and select "Highlight Updates". 
 
-
+<p align="center">
+            <img src="img/react-developer-tools-11.png">
+</p>
 
 
 With this option enabled every time an item is rendered again it will be highlighted for a moment. Very useful, for example, to check if items that should not be updated are doing so.
