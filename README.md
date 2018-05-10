@@ -24,11 +24,11 @@ So we'll see how this new icon appears in our plugin bar.
 </p>
 
 Then, using create-react-app let's prepare a small application to test our new tool:
-```
+```bash
 $ create-react-app debugging-react
 ```
 And we'll run the development server:
-```
+```bash
 $ cd debugging-react
 debugging-react$ npm start
 ```
@@ -90,7 +90,7 @@ export default SimpleNumber;
 
 And a container that creates 5 of those simple numbers and gives them a random value:
 
-```
+```javascript
 // debuggin-react/src/SimpleContainer.js
 
 import React, { Component } from 'react';
@@ -128,7 +128,7 @@ export default SimpleContainer;
 
 Finally, let's remove all the superfluous from the entry point of our React application:
 
-```
+```javascript
 // debuggin-react/src/App.js
 
 import React, { Component } from 'react';
