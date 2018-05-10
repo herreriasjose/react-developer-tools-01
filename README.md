@@ -28,51 +28,63 @@ Then, using create-react-app let's prepare a small application to test our new t
 $ create-react-app debugging-react
 ```
 And we'll run the development server:
-
+```
 $ cd debugging-react
 debugging-react$ npm start
-
+```
 
 At this point we should see that the icon has awakened.
 
-
+<p align="center">
+            <img src="img/react-developer-tools-03.png">
+</p>
 
 
 Let's press it and see what it says.
 
+<p align="center">
+            <img src="img/react-developer-tools-04.png">
+</p>
 
 
 
 It detected that we are working with a development version. Let's open developer tools inside Firefox (pressing F12 for example) and see what else it can tell us.
 
-
+<p align="center">
+            <img src="img/react-developer-tools-05.png">
+</p>
 
 It will take a moment to load the content of the page and then you will see the root React Component, which should be very similar to the JSX code that'create-react-app' has used to create it:
 
-
+<p align="center">
+            <img src="img/react-developer-tools-06.png">
+</p>
 
 
 That's a good start. But to see how it works more deeply, let's create a couple of elements.
 
 First a simple component that receives the value of a number, stores it in its state and displays it on the screen:
 
-
+```
 // debuggin-react/src/SimpleNumber.js
 
 import React, { Component } from 'react';
-class SimpleNumber extends Component {
-constructor(props){
-super(props);
-this.state = {label: "I'm a random number with value "};
-}
-render(){
-return (<div className="SimpleNumber">
-<p>{this.state.label}{this.props.value}</p>
-</div>);
-}
-}
-export default SimpleNumber;
 
+class SimpleNumber extends Component {
+            constructor(props){
+                        super(props);
+                        this.state = {label: "I'm a random number with value "};
+            }
+
+            render(){
+                        return (<div className="SimpleNumber">
+                        <p>{this.state.label}{this.props.value}</p>
+                        </div>);
+            }
+}
+
+export default SimpleNumber;
+```
 
 
 And a container that creates 5 of those simple numbers and gives them a random value:
